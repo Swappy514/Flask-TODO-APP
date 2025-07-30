@@ -1,0 +1,76 @@
+{% extends 'base.html' %} {% block title %}Tasks{% endblock %} {% block content
+%} {% if session['user'] %}
+<div class="welcome-bar">
+  <span class="profile-circle">{{ session['user'][0]|upper }}</span>
+  <span class="welcome-message">Welcome, {{ session['user'] }}!</span>
+</div>
+{% endif %}
+
+<div class="tasks-box">
+  <h2>Your Tasks</h2>
+  <form
+    action="{{ url_for('tasks.add_task') }}"
+    method="POST"
+    class="task-form"
+  >
+    <input type="text" name="title" placeholder="New Task" required />
+    <button type="submit" class="btn">Add Task</button>
+  </form>
+
+  {% if tasks %}
+  <form action="{{ url_for('tasks.clear_tasks') }}" method="POST">
+    <button type="submit" class="btn btn-clear">Clear All Tasks</button>
+  </form>
+  <br /><br />
+  <table class="task-table">
+    <thead>
+      <tr>
+        <th>Task No.</th>
+        <th>Task</th>
+        <th>Status</th>
+        <th>Change</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for task in tasks %}
+      <tr>
+        <td>{{ loop.index }}</td>
+        <td>{{ task.title }}</td>
+        <td>
+          <span class="badge {{ task.status|lower }}">{{ task.status }}</span>
+        </td>
+        <td>
+          <form
+            action="{{ url_for('tasks.toggle_status', task_id=task.id) }}"
+            method="POST"
+            style="display: inline"
+          >
+            <button type="submit" class="btn-small">Next</button>
+          </form>
+        </td>
+        <td>
+          <form
+            action="{{ url_for('tasks.delete_task', task_id=task.id) }}"
+            method="POST"
+            style="display: inline"
+          >
+            <button
+              type="submit"
+              class="btn-del"
+              onclick="return confirm('Delete this task?')"
+            >
+              Delete
+            </button>
+          </form>
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+  {% else %}
+  <p>No tasks available.</p>
+  {% endif %}
+</div>
+{% endblock %}

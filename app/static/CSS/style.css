@@ -1,0 +1,263 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+/* Header styles */
+header {
+    background: linear-gradient(to right, #095e64, #81C784);
+    color: white;
+    padding: 20px 0;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+header h1 {
+    text-align: center;
+    margin: 0;
+    font-size: 2.5em;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #e3c623;
+}
+
+/* Footer */
+footer{
+    background: linear-gradient(to right, #095e64, #81C784);
+    color: white;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 14px;
+    margin-top: 60px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer p {
+    margin: 0;
+}
+
+/*flash messages*/
+
+.flash.success {color: green;}
+.flash.danger {columns: red;}
+.flash.info {columns: blue;}
+
+/*Login Form*/
+.login-box {
+    max-width: 400px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-weight: block;
+    margin-bottom: 6px;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    margin-bottom: 6px;
+}
+
+.btn {
+    background: linear-gradient(90deg, #43e97b 0%, #38f9d7 100%);
+    color: white;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: linear-gradient(270deg, #30d6b8 0%, #1acb55 100%);
+}
+
+.task-box {
+    max-width: 700px;
+    margin: 40px auto;
+    background-color: white;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.task-form {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+
+.task-form input[type="text"] {
+    flex: 1;
+    padding: 12px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.task-form .btn {
+    padding: 12px 20px;
+    font-size: 16px;
+}
+
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.task-table th,
+.task-table td {
+    text-align: left;
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.task-table th{
+    background-color: #f2f2f2;
+}
+
+.btn-delete {
+    background: linear-gradient(to right, red, rgb(241, 77, 77));
+    color: white;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.btn-delete:hover {
+    background: linear-gradient(to right, red, rgb(241, 77, 77));
+}
+
+.btn-del {
+    background: linear-gradient(to right, red, rgb(241, 77, 77));
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-del:hover {
+    background: linear-gradient(to right, red, rgb(241, 77, 77));
+}
+
+
+
+.badge {
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+}
+
+.badge.pending {
+    background: linear-gradient(to right, #ffc107, #ffee07);
+}
+
+.badge.working {
+    background: linear-gradient(to right, #49d3dd, #89ebd6);
+}
+
+.badge.done {
+    background: linear-gradient(to right, #28a745, #05e93e);
+}
+
+.btn-small {
+    font-size: 12px;
+    padding: 6px 12px;
+    border: none;
+    background: linear-gradient(to right, #4e555a, #6c767d);
+    color: white;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn-small:hover {
+    background-color: #495057;
+}
+
+.btn-clear {
+    background: linear-gradient(90deg, #c31432 0%, #ff4e50 100%);
+    transition: background 0.3s, box-shadow 0.3s, transform 0.18s;
+    margin-bottom: 10px;
+}
+
+.btn-clear:hover {
+    background: linear-gradient(270deg, #240b36 0%, #c31432 100%);
+    box-shadow: 0 6px 18px rgba(195, 20, 50, 0.18), 0 1.5px 4px rgba(0,0,0,0.06);
+}
+
+.profile-info {
+  display: inline-block;
+  align-items: center;
+  margin-right: 1em;
+}
+
+.profile-circle {
+  display: inline-block;
+  width: 32px;
+  height: 32px;
+  background: #8dbfff;
+  border-radius: 50%;
+  color: #fff;
+  text-align: center;
+  line-height: 32px;
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-right: 1px;
+  box-shadow: 0 0 2px #888;
+}
+.profile-link {
+  text-decoration: none;
+}
+.profile-username {
+  font-weight: 600;
+  color: white;
+}
+
+.profile-username:hover {
+    color: #e3c623;
+}

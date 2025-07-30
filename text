@@ -1,0 +1,16 @@
+1 - define features
+like "add task", "delete task", "mark task as complete" # and "view tasks" keep it simple
+
+2 - project structure - create a folder named "TODO_APP" - inside it, create a subfolder named "text" - create a file named "tasks.txt" to store tasks
+
+3 - app setup - create a Python script named "todo_app.py" - import necessary libraries like os for file handling
+
+4 - models - define a Task class with attributes like id, title, description, and status - implement methods to add, delete, and update tasks
+
+5 - roots - create functions for each feature: - add_task(title, description) - delete_task(task_id) - mark_task_complete(task_id) - view_tasks()
+
+6 - HTML templates - create a simple HTML file to display tasks and forms for adding tasks - use Flask or Django for rendering templates
+
+7 - css - create a CSS file to style the HTML page - keep it simple with basic styles for tasks and forms
+
+8 - database init - use a simple text file or SQLite for storing tasks - implement functions to read and write tasks to the file - ensure tasks are stored in a structured format like JSON or CSV
