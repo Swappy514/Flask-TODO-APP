@@ -95,8 +95,8 @@ TODO_App/
 **🛠️ Technologies Used**
 - Python, Flask, Jinja2
 - HTML5, CSS3, JavaScript
-- SQLAlchemy (if using ORM)
-- Bootstrap (if utilized)
+- SQLAlchemy ( using ORM)
+- Bootstrap
 - Deployable on any cloud or local server
 
 **🤝 Contributing**
